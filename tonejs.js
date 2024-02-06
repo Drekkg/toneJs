@@ -7,6 +7,6 @@ playBtn.addEventListener("click", () => {
   if (Tone.context.state != "running") {
     Tone.start();
 }
-synth.triggerAttackRelease("c4");
+synth.triggerAttackRelease("c4", "8n");
 console.log("in func")
 })
