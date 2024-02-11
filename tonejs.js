@@ -97,7 +97,7 @@ const g = ['g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5',
 const gSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
 const a = ['a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5', 'g#5', 'a5'];
 const aSharp4notes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
-const b = ['b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5', 'g#5', 'a5', 'a#5', 'b5'];
+const b = ['b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5', 'g#5', 'a5', 'a#5', 'b 5'];
 const bSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
 
 
@@ -106,7 +106,8 @@ const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
   let chord = button.innerHTML[0].toLowerCase();
-  console.log(chord)
+  let shape = button.innerHTML.toLowerCase().slice(1, 4);
+  console.log("shape= " + shape);
   if(chord === "c"){
     chord = c;
   } else if(chord == "d") {
@@ -122,14 +123,20 @@ buttons.forEach((button) => {
     chord = g;
   }
   else if(chord == "a") {
-    chord = a;
+    chord = a; 
   }
   else if(chord == "b") {
     chord = b;
   }
   const maj = [0, 4, 7].map(noteMaj=> chord[noteMaj]);
+  const min =[0, 3, 7].map(noteMin=> chord[noteMin]);
+  if(shape === "maj"){
+     shape = maj;
+  } else if(shape === "min"){
+    shape = min;
+  }
 
-  button.addEventListener("click", triggerNote(maj)); 
+  button.addEventListener("click", triggerNote(shape)); 
   
 });
 
