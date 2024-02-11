@@ -130,10 +130,14 @@ buttons.forEach((button) => {
   }
   const maj = [0, 4, 7].map(noteMaj=> chord[noteMaj]);
   const min =[0, 3, 7].map(noteMin=> chord[noteMin]);
+  const dom =[0, 4, 7, 10].map(noteDom=> chord[noteDom]);
+
   if(shape === "maj"){
      shape = maj;
   } else if(shape === "min"){
     shape = min;
+  } else if(shape === "dom"){
+    shape = dom;
   }
 
   button.addEventListener("click", triggerNote(shape)); 
