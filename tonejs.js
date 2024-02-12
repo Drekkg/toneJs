@@ -86,63 +86,63 @@ const triggerNote = (note) => {
   }
 }
 
-const c = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
-const cSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
-const d = ['d4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5'];
-const dSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
-const e = ['e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5'];
-const f = ['f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5'];
-const fSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
-const g = ['g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5'];
-const gSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
-const a = ['a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5', 'g#5', 'a5'];
-const aSharp4notes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
-const b = ['b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5', 'g#5', 'a5', 'a#5', 'b 5'];
-const bSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
+// const c = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
+// const cSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
+// const d = ['d4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5'];
+// const dSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
+// const e = ['e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5'];
+// const f = ['f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5'];
+// const fSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
+// const g = ['g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5'];
+// const gSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
+// const a = ['a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5', 'g#5', 'a5'];
+// const aSharp4notes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
+// const b = ['b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5', 'g#5', 'a5', 'a#5', 'b 5'];
+// const bSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
 
 
  
-const buttons = document.querySelectorAll('button');
+// const buttons = document.querySelectorAll('button');
 
-buttons.forEach((button) => {
-  let chord = button.innerHTML[0].toLowerCase();
-  let shape = button.innerHTML.toLowerCase().slice(1, 4);
-  console.log("shape= " + shape);
-  if(chord === "c"){
-    chord = c;
-  } else if(chord == "d") {
-    chord = d;
-  }
-  else if(chord == "e") {
-    chord = e;
-  }
-  else if(chord == "f") {
-    chord = f;
-  }
-  else if(chord == "g") {
-    chord = g;
-  }
-  else if(chord == "a") {
-    chord = a; 
-  }
-  else if(chord == "b") {
-    chord = b;
-  }
-  const maj = [0, 4, 7].map(noteMaj=> chord[noteMaj]);
-  const min =[0, 3, 7].map(noteMin=> chord[noteMin]);
-  const dom =[0, 4, 7, 10].map(noteDom=> chord[noteDom]);
+// buttons.forEach((button) => {
+//   let chord = button.innerHTML[0].toLowerCase();
+//   let shape = button.innerHTML.toLowerCase().slice(1, 4);
+//   console.log("shape= " + shape);
+//   if(chord === "c"){
+//     chord = c;
+//   } else if(chord == "d") {
+//     chord = d;
+//   }
+//   else if(chord == "e") {
+//     chord = e;
+//   }
+//   else if(chord == "f") {
+//     chord = f;
+//   }
+//   else if(chord == "g") {
+//     chord = g;
+//   }
+//   else if(chord == "a") {
+//     chord = a; 
+//   }
+//   else if(chord == "b") {
+//     chord = b;
+//   }
+//   const maj = [0, 4, 7].map(noteMaj=> chord[noteMaj]);
+//   const min =[0, 3, 7].map(noteMin=> chord[noteMin]);
+//   const dom =[0, 4, 7, 10].map(noteDom=> chord[noteDom]);
 
-  if(shape === "maj"){
-     shape = maj;
-  } else if(shape === "min"){
-    shape = min;
-  } else if(shape === "dom"){
-    shape = dom;
-  }
+//   if(shape === "maj"){
+//      shape = maj;
+//   } else if(shape === "min"){
+//     shape = min;
+//   } else if(shape === "dom"){
+//     shape = dom;
+//   }
 
-  button.addEventListener("click", triggerNote(shape)); 
+//   button.addEventListener("click", triggerNote(shape)); 
   
-});
+// });
 
 
 
@@ -168,3 +168,32 @@ buttons.forEach((button) => {
    
 //   }
 // });
+const notes = {
+  c: ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'],
+  d: ['d4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5'],
+  e: ['e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5'],
+  f: ['f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5'],
+  g: ['g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5'],
+  a: ['a4', 'a#4', 'b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5', 'g#5', 'a5'],
+  b: ['b4', 'c5', 'c#5', 'd5', 'd#5', 'e5', 'f5', 'f#5', 'g5', 'g#5', 'a5', 'a#5', 'b 5']
+};
+
+const shapes = {
+  maj: [0, 4, 7],
+  min: [0, 3, 7],
+  dom: [0, 4, 7, 10]
+};
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  let chordName = button.innerHTML[0].toLowerCase();
+  let shapeName = button.innerHTML.toLowerCase().slice(1, 4);
+  console.log("shape= " + shapeName);
+
+  let chord = notes[chordName];
+  let shape = shapes[shapeName].map(index => chord[index]);
+  button.addEventListener("click", triggerNote(shape)); 
+});
+
+
