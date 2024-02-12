@@ -67,25 +67,6 @@
 //   synth.triggerAttackRelease("c5", "8n");
 // });
 
-const synth = new Tone.PolySynth();
-const reverb = new Tone.Reverb();
-synth.connect(reverb);
-reverb.toDestination();
-
-
-// const synth = new Tone.Synth().toDestination();
-
-const triggerNote = (note) => {
-  return () => {
-    if (Tone.context.state != "running") {
-      Tone.start();
-    }
-    console.log(note);
-    synth.triggerAttackRelease(note, "8n");
-    
-  }
-}
-
 // const c = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
 // const cSharpnotes = ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'];
 // const d = ['d4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5'];
@@ -168,6 +149,29 @@ const triggerNote = (note) => {
    
 //   }
 // });
+
+
+
+const synth = new Tone.PolySynth();
+const reverb = new Tone.Reverb();
+synth.connect(reverb);
+reverb.toDestination();
+
+
+// const synth = new Tone.Synth().toDestination();
+
+const triggerNote = (note) => {
+  return () => {
+    if (Tone.context.state != "running") {
+      Tone.start();
+    }
+    console.log(note);
+    synth.triggerAttackRelease(note, "8n");
+    
+  }
+}
+
+
 const notes = {
   c: ['c4', 'c#4', 'd4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5'],
   d: ['d4', 'd#4', 'e4', 'f4', 'f#4', 'g4', 'g#4', 'a4', 'a#4', 'b4', 'c5', 'c#5', 'd5'],
@@ -181,7 +185,8 @@ const notes = {
 const shapes = {
   maj: [0, 4, 7],
   min: [0, 3, 7],
-  dom: [0, 4, 7, 10]
+  dom: [0, 4, 7, 10],
+  dim: [0, 3, 6]
 };
 
 const buttons = document.querySelectorAll('button');
