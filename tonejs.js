@@ -98,17 +98,7 @@
 //     chord = e;
 //   }
 //   else if(chord == "f") {
-//     chord = f;
-//   }
-//   else if(chord == "g") {
-//     chord = g;
-//   }
-//   else if(chord == "a") {
-//     chord = a; 
-//   }
-//   else if(chord == "b") {
-//     chord = b;
-//   }
+//    
 //   const maj = [0, 4, 7].map(noteMaj=> chord[noteMaj]);
 //   const min =[0, 3, 7].map(noteMin=> chord[noteMin]);
 //   const dom =[0, 4, 7, 10].map(noteDom=> chord[noteDom]);
